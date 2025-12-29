@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyCutiePie - Kids Factory Outlet. Affordable and accessible baby & kids products without compromising on quality.">
+    <meta name="keywords" content="kids products, baby care, children clothing, toys, footwear, franchise">
+    <title>MyCutiePie – Kids Factory Outlet</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Brand Gradient Colors */
+            --brand-cyan: rgb(0, 185, 245);
+            --brand-blue: rgb(0, 103, 170);
+            --brand-gradient: linear-gradient(135deg, rgb(0, 185, 245), rgb(0, 103, 170));
+            --brand-gradient-reverse: linear-gradient(135deg, rgb(0, 103, 170), rgb(0, 185, 245));
+            
+            /* Complementary Pastels */
+            --pink: #FFE5E5;
+            --pink-light: #FFF5F5;
+            --mint: #E0F7FA;
+            --mint-light: #F0FEFF;
+            --peach: #FFF0E5;
+            --peach-light: #FFF8F0;
+            --lavender: #F0E5FF;
+            --lavender-light: #F8F0FF;
+            
+            /* Base Colors */
+            --white: #FFFFFF;
+            --bg-light: #FAFBFC;
+            --text-dark: #1A1A1A;
+            --text-gray: #444444;
+            --text-light: #666666;
+            
+            /* Shadows & Effects */
+            --shadow: 0 4px 20px rgba(0, 103, 170, 0.1);
+            --shadow-hover: 0 8px 30px rgba(0, 103, 170, 0.2);
+            --shadow-brand: 0 4px 20px rgba(0, 185, 245, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--brand-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+            border-image: var(--brand-gradient) 1;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-gray);
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--brand-gradient);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-cyan);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--brand-gradient);
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            opacity: 0.5;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            opacity: 0.5;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content .tagline {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--brand-blue);
+            box-shadow: var(--shadow-brand);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            border-color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--brand-gradient);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--brand-cyan);
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-text .mission {
+            background: linear-gradient(135deg, var(--mint-light), var(--peach-light));
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid var(--brand-cyan);
+        }
+
+        .about-text .mission strong {
+            color: var(--text-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature-item .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .feature-item:nth-child(1) .icon { background: var(--pink-light); }
+        .feature-item:nth-child(2) .icon { background: var(--blue-light); }
+        .feature-item:nth-child(3) .icon { background: var(--mint-light); }
+        .feature-item:nth-child(4) .icon { background: var(--yellow-light); }
+
+        /* Products Section */
+        .products {
+            background: linear-gradient(180deg, var(--white) 0%, var(--pink-light) 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-card .image-wrapper {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-card .card-content {
+            padding: 25px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .product-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .product-card .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .product-card:nth-child(1) .card-icon { background: var(--pink-light); }
+        .product-card:nth-child(2) .card-icon { background: var(--blue-light); }
+        .product-card:nth-child(3) .card-icon { background: var(--mint-light); }
+        .product-card:nth-child(4) .card-icon { background: var(--yellow-light); }
+        .product-card:nth-child(5) .card-icon { background: var(--purple-light); }
+        .product-card:nth-child(6) .card-icon { background: var(--pink-light); }
+
+        .products-note {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .products-note p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* Franchise Section */
+        .franchise {
+            background: linear-gradient(135deg, var(--blue-light) 0%, var(--mint-light) 100%);
+        }
+
+        .franchise-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .franchise-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .franchise-text > p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .franchise-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .highlight-card {
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .highlight-card .icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .highlight-card:nth-child(1) .icon { background: var(--pink-light); }
+        .highlight-card:nth-child(2) .icon { background: var(--blue-light); }
+        .highlight-card:nth-child(3) .icon { background: var(--mint-light); }
+        .highlight-card:nth-child(4) .icon { background: var(--yellow-light); }
+        .highlight-card:nth-child(5) .icon { background: var(--purple-light); }
+
+        .highlight-card strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .highlight-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .franchise-image {
+            position: relative;
+        }
+
+        .franchise-image img {
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .franchise-cta {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .franchise-cta p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Store Locations Section */
+        .locations {
+            background: linear-gradient(180deg, var(--pink-light) 0%, var(--white) 100%);
+        }
+
+        .stores-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .store-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--pink);
+        }
+
+        .store-card:nth-child(2) {
+            border-left-color: var(--blue);
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .store-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .store-card h3 .icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--pink-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .store-card:nth-child(2) h3 .icon {
+            background: var(--blue-light);
+        }
+
+        .store-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .store-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .store-info-item .icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            background: var(--mint-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .store-info-item .text {
+            flex: 1;
+        }
+
+        .store-info-item strong {
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+            font-size: 0.9rem;
+        }
+
+        .store-info-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .store-hours {
+            background: linear-gradient(135deg, var(--yellow-light), var(--mint-light));
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .store-hours p {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .store-hours .time {
+            font-size: 1.2rem;
+            color: var(--pink);
+            margin-top: 5px;
+        }
+
+        .locations-cta {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .locations-cta h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .locations-cta p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-person {
+            background: linear-gradient(135deg, var(--pink-light), var(--blue-light));
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .contact-person:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-person h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--pink);
+        }
+
+        .contact-message {
+            background: var(--mint-light);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-message p {
+            color: var(--text-dark);
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .contact-map {
+            background: var(--blue-light);
+            border-radius: 20px;
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .map-placeholder .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .map-placeholder p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .map-placeholder strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1a1a2e 100%);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+        }
+
+        .footer h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--pink);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--pink);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-btn svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.6); }
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: var(--pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 998;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--purple);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .franchise-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stores-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .hero-content .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .scroll-top {
+                bottom: 85px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .product-card .image-wrapper {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="logo.jpeg" alt="MyCutieipie - Kids Factory Outlet">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#franchise">Franchise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1><span class="highlight">Mycutiepie</span> – Kids Factory Outlet</h1>
+                <p class="tagline">Your one-stop shop for affordable, high-quality baby & kids products! Top-notch quality at the best prices – comfortable kids clothing, stylish imported footwear, soft toys, electronic toys, school bags and more.</p>
+                <div class="buttons">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#franchise" class="btn btn-secondary">Franchise Info</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&h=500&fit=crop" alt="Happy kids with toys">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>About MyCutiepie</h2>
+                <p>Kids Factory Outlet</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500&h=400&fit=crop" alt="Kids clothing store">
+                </div>
+                <div class="about-text fade-in">
+                    <h3>Your Trusted Kids Factory Outlet</h3>
+                    <p>MyCutiepie is your trusted Kids Factory Outlet, dedicated to making parenting easier and more joyful.</p>
+                    
+                    <div class="mission">
+                        <strong>Our mission is simple:</strong>
+                        <p>Affordable and accessible baby & kids products without compromising on quality.</p>
+                    </div>
+                    
+                    <p>We bring top-notch quality at the best prices — comfortable, kid-friendly clothing, stylish footwear, and fun educational & entertaining toys — all under one roof.</p>
+                    
+                    <p>We are your one-stop solution for parents who want the perfect balance of style, comfort, safety, and unbeatable value for their little ones.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="icon">👕</div>
+                            <span>Quality Clothing</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">👟</div>
+                            <span>Stylish Footwear</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">🧸</div>
+                            <span>Fun Toys</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon">💰</div>
+                            <span>Best Prices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Our Product Catalogue</h2>
+                <p>Everything your little ones need, all in one place</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400&h=300&fit=crop" alt="Babycare Products">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">🍼</div>
+                        <h3>Babycare Products</h3>
+                        <p>Gentle, safe essentials for newborns and infants</p>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=400&h=300&fit=crop" alt="Kids Clothing">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">👗</div>
+                        <h3>Kids Clothing</h3>
+                        <p>Comfortable, stylish, and durable outfits for everyday wear and special occasions</p>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" alt="Imported Footwear">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">👟</div>
+                        <h3>Imported Footwear</h3>
+                        <p>Trendy, high-quality shoes designed for growing feet</p>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=300&fit=crop" alt="Soft Toys">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">🧸</div>
+                        <h3>Soft Toys</h3>
+                        <p>Cuddly, safe, and lovable companions for your child</p>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=300&fit=crop" alt="Electronic Toys">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">🎮</div>
+                        <h3>Electronic Toys</h3>
+                        <p>Interactive and educational gadgets that spark curiosity and fun</p>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop" alt="School Bags">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">🎒</div>
+                        <h3>School Bags</h3>
+                        <p>Sturdy, attractive, and practical bags for school-going kids</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="products-note fade-in">
+                <p>✨ Everything is carefully selected to offer super affordable prices without sacrificing quality or safety.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Our Store Locations</h2>
+                <p>Visit us at any of our existing Mycutiepie stores in Gulbarga – big variety, great service, and unbeatable prices!</p>
+            </div>
+            
+            <div class="stores-grid">
+                <div class="store-card fade-in">
+                    <h3>
+                        <span class="icon">🏪</span>
+                        Mycutiepie – Ram Nagar
+                    </h3>
+                    <div class="store-info">
+                        <div class="store-info-item">
+                            <div class="icon">📍</div>
+                            <div class="text">
+                                <strong>Address</strong>
+                                <p>Shivaji Complex, near Humnabad Ring Road, Ram Nagar, Gulbarga, Karnataka</p>
+                            </div>
+                        </div>
+                        <div class="store-info-item">
+                            <div class="icon">🗺️</div>
+                            <div class="text">
+                                <strong>Landmark</strong>
+                                <p>Near Humnabad Ring Road</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="store-hours">
+                        <p>Open Daily</p>
+                        <p class="time">10:00 AM - 9:30 PM</p>
+                    </div>
+                </div>
+                
+                <div class="store-card fade-in">
+                    <h3>
+                        <span class="icon">🏪</span>
+                        Mycutiepie – Mini Vidhan Soudha
+                    </h3>
+                    <div class="store-info">
+                        <div class="store-info-item">
+                            <div class="icon">📍</div>
+                            <div class="text">
+                                <strong>Address</strong>
+                                <p>2nd Floor, above Bilgundi Honda Showroom, near Mini Vidhan Soudha, Gulbarga, Karnataka</p>
+                            </div>
+                        </div>
+                        <div class="store-info-item">
+                            <div class="icon">🗺️</div>
+                            <div class="text">
+                                <strong>Landmark</strong>
+                                <p>Above Bilgundi Honda Showroom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="store-hours">
+                        <p>Open Daily</p>
+                        <p class="time">10:00 AM - 9:30 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="locations-cta fade-in">
+                <h3>✨ Come experience the Mycutiepie difference!</h3>
+                <p>Quality you can trust, prices you'll love!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franchise Section -->
+    <section id="franchise" class="franchise">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Franchise Opportunity</h2>
+                <p>Join our growing family and become part of a successful kids retail brand!</p>
+            </div>
+            <div class="franchise-content">
+                <div class="franchise-text fade-in">
+                    <h3>Become a Mycutiepie Franchise Partner</h3>
+                    <p>Our two successful stores in Gulbarga have already won the hearts of thousands of parents. Now we're ready to expand across Karnataka and beyond!</p>
+                    
+                    <div class="franchise-highlights">
+                        <div class="highlight-card">
+                            <div class="icon">✅</div>
+                            <div>
+                                <strong>Proven Model</strong>
+                                <p>Two busy, profitable stores already running in Gulbarga</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="icon">📐</div>
+                            <div>
+                                <strong>Store Size Requirement</strong>
+                                <p>Minimum 1500 sq. ft. for wide product display</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="icon">📦</div>
+                            <div>
+                                <strong>Huge Stockpiles</strong>
+                                <p>Widest variety and full size/color range</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="icon">⭐</div>
+                            <div>
+                                <strong>Quality Focus</strong>
+                                <p>Strong focus on comfort, quality clothing & imported footwear</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="icon">🏪</div>
+                            <div>
+                                <strong>Beautiful Stores</strong>
+                                <p>Clean, well-maintained stores with premium look</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-card">
+                            <div class="icon">💝</div>
+                            <div>
+                                <strong>Customer Satisfaction</strong>
+                                <p>Zero compromise on customer satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="franchise-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=400&fit=crop" alt="Retail store interior">
+                    
+                    <div class="franchise-cta">
+                        <p><strong>Investment level:</strong> Higher than average due to large space and extensive inventory – but delivers excellent returns.</p>
+                        <p>Ready to open your own Mycutiepie Kids Factory Outlet? Let's bring Mycutiepie to your city!</p>
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you!</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="contact-person">
+                        <h4>Srinivas</h4>
+                        <div class="contact-item">
+                            <div class="icon">📍</div>
+                            <span>Gunj Colony, Gulbarga (Kalaburagi)</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">📞</div>
+                            <a href="tel:+919591419997">+91 95914 19997</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">✉️</div>
+                            <a href="mailto:srinivassc01@gmail.com">srinivassc01@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-person">
+                        <h4>Shridhar</h4>
+                        <div class="contact-item">
+                            <div class="icon">📞</div>
+                            <a href="tel:+918951669919">+91 89516 69919</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">✉️</div>
+                            <a href="mailto:shridharchavn@gmail.com">shridharchavn@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-message">
+                        <p>We're excited to hear from you — whether you're a parent looking for great deals, or an entrepreneur interested in franchising!</p>
+                    </div>
+                </div>
+                
+                <div class="contact-map fade-in">
+                    <div class="map-placeholder">
+                        <div class="icon">📍</div>
+                        <p>Visit Our Store</p>
+                        <strong>Gunj Colony, Gulbarga (Kalaburagi)</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <img src="logo.jpeg" alt="MyCutiepie - Kids Factory Outlet">
+                    </a>
+                    <p>Your trusted Kids Factory Outlet, dedicated to making parenting easier and more joyful with affordable, quality products.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="18" cy="6" r="1"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#franchise">Franchise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">Babycare</a></li>
+                        <li><a href="#products">Kids Clothing</a></li>
+                        <li><a href="#products">Footwear</a></li>
+                        <li><a href="#products">Toys</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+919591419997">+91 95914 19997</a></li>
+                        <li><a href="tel:+918951669919">+91 89516 69919</a></li>
+                        <li><a href="mailto:srinivassc01@gmail.com">Email Us</a></li>
+                        <li><a href="#contact">Location</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyCutiepie – Kids Factory Outlet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918951669919?text=Hi%2C%20I%27m%20interested%20in%20MyCutiepie" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Fade-in Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Smooth scroll for navigation links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'var(--white)';
+                navbar.style.boxShadow = 'var(--shadow)';
+            }
+        });
+    </script>
+</body>
+</html>
